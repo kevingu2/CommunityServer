@@ -15,6 +15,7 @@ var nodemon = require('gulp-nodemon'),
 gulp.task('serve:backend', function() {
     return nodemon({
         script: 'app.js',
+        watch: ['server/**/*.js'],
         ignore: ['server/test/**/*.js']
     })
         .on('restart', function() {
