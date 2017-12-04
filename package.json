@@ -1,0 +1,32 @@
+{
+  "name": "community",
+  "version": "1.0.0",
+  "description": "Backend for Community app",
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp test:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/kevingu2/communityserver.git"
+  },
+  "keywords": [
+    "community"
+  ],
+  "author": "Kevin Gu",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kevingu2/communityserver#readme",
+  "dependencies": {
+    "express": "~4.13.1"
+  },
+  "devDependencies": {
+    "apidoc": "0.16.1",
+    "gulp": "^3.9.1",
+    "gulp-exit": "0.0.2",
+    "gulp-mocha": "2.0.0",
+    "gulp-nodemon": "1.0.5",
+    "gulp-shell": "0.3.0",
+    "require-dir": "0.3.2",
+    "supertest": "^3.0.0"
+  }
+}
