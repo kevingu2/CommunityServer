@@ -46,4 +46,4 @@ gulp.task('lint:server', function() {
 });
 
 
-gulp.task('default', ['test:server', 'serve:backend']);
+gulp.task('default', ['lint:server', 'test:server', 'serve:backend']);
