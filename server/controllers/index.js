@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     res.json({
         status: 200,
         message: "Hello World"
-    })
+    });
 });
 
 module.exports = router;

@@ -1,11 +1,12 @@
 /**
  * Created by kevingu on 4/2/16.
  */
-var nodemon = require('gulp-nodemon'),
-    shell = require('gulp-shell'),
-    mocha = require('gulp-mocha'),
-    exit = require('gulp-exit'),
-    gulp = require('gulp');
+const nodemon = require('gulp-nodemon');
+const shell = require('gulp-shell');
+const mocha = require('gulp-mocha');
+const exit = require('gulp-exit');
+const gulp = require('gulp');
+const jshint = require('gulp-jshint');
 
 
 /* Serve the server. gulp-nodemon is used for automatic
@@ -37,5 +38,12 @@ gulp.task('test:server', function(){
         .pipe(mocha({reporter: 'spec'}))
         .pipe(exit());
 });
+
+gulp.task('lint:server', function() {
+    return gulp.src('./server/controllers/*.js')
+           .pipe(jshint())
+           .pipe(jshint.reporter('default'))
+});
+
 
 gulp.task('default', ['test:server', 'serve:backend']);

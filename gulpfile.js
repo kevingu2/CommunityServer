@@ -3,6 +3,5 @@
  */
 
 var dir = require('require-dir');
-var gulp = require('gulp');
 
 dir('./gulp/', { recurse: true });
