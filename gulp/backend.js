@@ -40,7 +40,7 @@ gulp.task('test:server', function(){
 });
 
 gulp.task('lint:server', function() {
-    return gulp.src('./server/controllers/*.js')
+    return gulp.src('./server/**/*.js', )
            .pipe(jshint())
            .pipe(jshint.reporter('default'))
 });
