@@ -59,7 +59,7 @@ gulp.task('lint:server', function() {
 gulp.task('api-docs', function(){
     'use strict';
     return gulp.src('')
-        .pipe(shell('apidoc -i server/ -o apidoc/'));
+        .pipe(shell('apidoc -i server/ -o public/apidoc/'));
 });
 
 

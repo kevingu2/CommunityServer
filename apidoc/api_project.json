@@ -1,1 +1,0 @@
-{  "title": "Custom Comminuty API",  "name": "community",  "version": "1.0.0",  "description": "Backend for Community app",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2017-12-10T05:45:42.463Z",    "url": "http://apidocjs.com",    "version": "0.16.1"  }}
