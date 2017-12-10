@@ -21,7 +21,7 @@ if (app.get('env') === 'development') {
 }
 
 /* routes API*/
-app.use('/', require('./server/controllers/index'));
+app.use('/api/', require('./server/controllers/index'));
 
 server.listen(app.get('port'), function() {
     console.log('Express server listening on port %d in %s mode',

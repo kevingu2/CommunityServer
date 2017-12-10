@@ -13,6 +13,9 @@
   "keywords": [
     "community"
   ],
+  "apidoc": {
+    "title": "Custom Comminuty API"
+  },
   "author": "Kevin Gu",
   "license": "ISC",
   "homepage": "https://bitbucket.org/kevingu2/communityserver#readme",

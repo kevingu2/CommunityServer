@@ -1,7 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/**
+ * @api {get} /api Request api
+ * @apiName getAPI
+ * @apiGroup Index
+ *
+ *
+ * @apiSuccess {String} message Hello World
+ */
 router.get('/', function(req, res) {
     'use strict';
     res.json({
