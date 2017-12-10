@@ -15,3 +15,15 @@ describe('GET /api/index', function() {
             .expect(200, done);
     });
 });
+
+/* Test that api documentation returns */
+describe('GET /api', function() {
+    'use strict';
+    it('should return 200 OK', function(done) {
+        request(app)
+            .get('/api')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /html/)
+            .expect(303, done);
+    });
+});
