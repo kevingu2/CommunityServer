@@ -1,6 +1,5 @@
 var express = require('express');
 var http = require('http');
-var path = require('path');
 
 var app = express();
 var config = require('./server/config/config');
@@ -11,7 +10,8 @@ var server = http.createServer(app);
 
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
+    app.use(function(err, req, res) {
+        'use strict';
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -27,6 +27,7 @@ app.use('/api', express.static(__dirname + '/public/apidoc/'));
 app.use('/api', require('./server/controllers/index'));
 
 server.listen(app.get('port'), function() {
+    'use strict';
     console.log('Express server listening on port %d in %s mode',
         app.get('port'),
         app.get('env'));

@@ -7,6 +7,7 @@ const mocha = require('gulp-mocha');
 const exit = require('gulp-exit');
 const gulp = require('gulp');
 const jshint = require('gulp-jshint');
+var merge = require('merge-stream');
 
 
 /* Serve the server. gulp-nodemon is used for automatic
@@ -14,12 +15,12 @@ const jshint = require('gulp-jshint');
  * Note: do not start directories with ./ in watch and ignore
  */
 gulp.task('serve:backend', function() {
+    'use strict';
     return nodemon({
         script: 'app.js',
         watch: ['server/**/*.js'],
         ignore: ['server/test/**/*.js']
-    })
-        .on('restart', function() {
+    }).on('restart', function() {
             console.log('Server restarting. Please wait.');
         });
 });
@@ -28,21 +29,31 @@ gulp.task('serve:backend', function() {
  * to automatically access the .env file.
  */
 gulp.task('backend', function() {
+    'use strict';
     return gulp.src('')
-        .pipe(shell('nf run gulp serve:backend'))
+        .pipe(shell('nf run gulp serve:backend'));
 });
 
 /* This will run our mocha tests */
 gulp.task('test:server', function(){
+    'use strict';
     return gulp.src('server/test/*.js', {read: false})
         .pipe(mocha({reporter: 'spec'}))
         .pipe(exit());
 });
 
 gulp.task('lint:server', function() {
-    return gulp.src('./server/**/*.js')
-           .pipe(jshint())
-           .pipe(jshint.reporter('default'))
+    'use strict';
+    var serverDir = gulp.src('./server/**/*.js')
+                        .pipe(jshint())
+                        .pipe(jshint.reporter('default'));
+    var appFile = gulp.src('./app.js')
+                      .pipe(jshint())
+                      .pipe(jshint.reporter('default'));
+    var gulpDir = gulp.src('./gulp/**/*.js')
+                      .pipe(jshint())
+                      .pipe(jshint.reporter('default'));
+    return merge(serverDir, appFile, gulpDir);
 });
 
 
