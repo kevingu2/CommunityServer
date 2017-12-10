@@ -62,5 +62,5 @@ gulp.task('api-docs', function(){
         .pipe(shell('apidoc -i server/ -o public/apidoc/'));
 });
 
-
-gulp.task('default', ['lint:server', 'test:server', 'api-docs', 'serve:backend']);
+gulp.task('test', ['lint:server', 'test:server'])
+gulp.task('default', ['api-docs', 'serve:backend']);
