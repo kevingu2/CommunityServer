@@ -9,8 +9,9 @@ app.set('port', config.port);
 var server = http.createServer(app);
 
 // will print stacktrace
+/* jshint unused:vars */
 if (app.get('env') === 'development') {
-    app.use(function(err, req, res) {
+    app.use(function(err, req, res, _) {
         'use strict';
         res.status(err.status || 500);
         res.render('error', {

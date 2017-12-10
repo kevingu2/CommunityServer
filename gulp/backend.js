@@ -56,5 +56,11 @@ gulp.task('lint:server', function() {
     return merge(serverDir, appFile, gulpDir);
 });
 
+gulp.task('api-docs', function(){
+    'use strict';
+    return gulp.src('')
+        .pipe(shell('apidoc -i server/ -o apidoc/'));
+});
 
-gulp.task('default', ['lint:server', 'test:server', 'serve:backend']);
+
+gulp.task('default', ['lint:server', 'test:server', 'api-docs', 'serve:backend']);
