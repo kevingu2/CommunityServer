@@ -5,11 +5,11 @@ var request = require('supertest');
 var appRoot = require('app-root-path');
 var app = require(appRoot + '/app.js');
 
-describe('GET /api', function() {
+describe('GET /api/index', function() {
     'use strict';
     it('should return 200 OK', function(done) {
         request(app)
-            .get('/api')
+            .get('/api/index')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200, done);

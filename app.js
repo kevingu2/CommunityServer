@@ -20,8 +20,11 @@ if (app.get('env') === 'development') {
     });
 }
 
+// serve api docs
+app.use('/api', express.static(__dirname + '/public/apidoc'));
+
 /* routes API*/
-app.use('/api/', require('./server/controllers/index'));
+app.use('/api', require('./server/controllers/index'));
 
 server.listen(app.get('port'), function() {
     console.log('Express server listening on port %d in %s mode',
