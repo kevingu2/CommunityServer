@@ -22,7 +22,7 @@ gulp.task('serve:backend', function() {
         ignore: ['server/test/**/*.js']
     }).on('restart', function() {
             console.log('Server restarting. Please wait.');
-        });
+    });
 });
 
 /* Use foreman to serve the server, allowing gulp-nodemon
@@ -59,7 +59,7 @@ gulp.task('lint:server', function() {
 gulp.task('api-docs', function(){
     'use strict';
     return gulp.src('')
-        .pipe(shell('apidoc -i server/ -o public/apidoc/'));
+               .pipe(shell('apidoc -i server/ -o public/apidoc/'));
 });
 
 gulp.task('test', ['lint:server', 'test:server'])

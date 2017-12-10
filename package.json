@@ -4,7 +4,8 @@
   "description": "Backend for Community app",
   "main": "app.js",
   "scripts": {
-    "test": "gulp test:server"
+    "test": "gulp test:server",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
