@@ -4,7 +4,7 @@
   "description": "Backend for Community app",
   "main": "app.js",
   "scripts": {
-    "test": "jenkins-mocha server/test/**/*.js --exit",
+    "test": "mocha --reporter mocha-tap-reporter server/test/**/*.js",
     "start": "node app.js"
   },
   "repository": {
@@ -36,6 +36,6 @@
     "jshint": "^2.9.5",
     "app-root-path": "^2.0.1",
     "merge-stream": "^1.0.1",
-    "jenkins-mocha": "^6.0.0 "
+    "mocha-tap-reporter": "^0.1.3"
   }
 }
