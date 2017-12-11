@@ -4,7 +4,7 @@
   "description": "Backend for Community app",
   "main": "app.js",
   "scripts": {
-    "test": "jenkins-mocha server/test/**/*.js",
+    "test": "jenkins-mocha server/test/**/*.js --exit",
     "start": "node app.js"
   },
   "repository": {
