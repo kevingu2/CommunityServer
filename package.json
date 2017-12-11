@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --reporter mocha-tap-reporter server/test/**/*.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "apidocs": "gulp api-docs"
   },
   "repository": {
     "type": "git",
