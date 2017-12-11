@@ -4,8 +4,8 @@
   "description": "Backend for Community app",
   "main": "app.js",
   "scripts": {
-    "test": "gulp test:server",
-    "start": "gulp"
+    "test": "jenkins-mocha server/test/**/*.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/kevingu2/communityserver#readme",
   "dependencies": {
-    "express": "~4.13.1",
+    "express": "~4.13.1"
+  },
+  "devDependencies": {
     "apidoc": "0.16.1",
     "gulp": "^3.9.1",
     "gulp-exit": "0.0.2",
@@ -33,9 +35,7 @@
     "gulp-jshint": "^2.0.4",
     "jshint": "^2.9.5",
     "app-root-path": "^2.0.1",
-    "merge-stream": "^1.0.1"
-  },
-  "devDependencies": {
-
+    "merge-stream": "^1.0.1",
+    "jenkins-mocha": "^6.0.0 "
   }
 }
