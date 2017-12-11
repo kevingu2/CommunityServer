@@ -12,7 +12,7 @@
 2. [MongoDb](https://www.mongodb.org) (https://www.mongodb.org)
 
 ### Instructions
-**Step 1:** Clone the project from[Repo](https://kevingu2@bitbucket.org/kevingu2/communityserver.git)
+**Step 1:** Clone the project from [Repo](https://kevingu2@bitbucket.org/kevingu2/communityserver.git)
 
 **Step 2:** Run **npm install** in the directory of the project to install the dependency for the backend
 
