@@ -21,9 +21,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/kevingu2/communityserver#readme",
   "dependencies": {
-    "express": "~4.13.1"
-  },
-  "devDependencies": {
+    "express": "~4.13.1",
     "apidoc": "0.16.1",
     "gulp": "^3.9.1",
     "gulp-exit": "0.0.2",
@@ -36,5 +34,8 @@
     "jshint": "^2.9.5",
     "app-root-path": "^2.0.1",
     "merge-stream": "^1.0.1"
+  },
+  "devDependencies": {
+
   }
 }
