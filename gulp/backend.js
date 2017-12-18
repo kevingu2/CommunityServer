@@ -37,6 +37,7 @@ gulp.task('backend', function() {
 /* This will run our mocha tests */
 gulp.task('test:server', function(){
     'use strict';
+    process.env.NODE_ENV = 'test';
     return gulp.src('server/test/*.js', {read: false})
         .pipe(mocha({reporter: 'spec'}))
         .pipe(exit());
