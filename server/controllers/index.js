@@ -13,7 +13,7 @@ router.get('/index', function(req, res) {
     'use strict';
     res.json({
         status: 200,
-        message: 'Hello World'
+        message: 'Hello World Community'
     });
 });
 
